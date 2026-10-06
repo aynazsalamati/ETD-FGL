@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite it using the metadata below."
+title: "ETD-FGL: Federated Graph Learning Against Backdoor Attacks Using Topology-aware Defense"
+type: software
+authors:
+  - family-names: Salamati
+    given-names: Aynaz
+year-released: 2026
+license: MIT

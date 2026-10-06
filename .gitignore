@@ -1,0 +1,149 @@
+# ============================================================
+# ETD-FGL Project .gitignore
+# ============================================================
+
+# ----------------------------
+# Python
+# ----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# ----------------------------
+# Virtual environments
+# ----------------------------
+.venv/
+venv/
+env/
+ENV/
+
+# ----------------------------
+# IDE / Editor
+# ----------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ----------------------------
+# Environment / secrets
+# ----------------------------
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# ----------------------------
+# Dataset files / caches
+# ----------------------------
+data/
+cache/
+datasets/
+
+*.pt
+*.pth
+*.ckpt
+*.bin
+
+# ----------------------------
+# Experiment outputs
+# ----------------------------
+results/
+outputs/
+runs/
+logs/
+wandb/
+
+final_multidataset/
+federated_cora/
+
+# Generated experiment artifacts
+training_history.csv
+final_summary.json
+
+# ----------------------------
+# Model checkpoints
+# ----------------------------
+checkpoints/
+best_model.pt
+last_model.pt
+
+# ----------------------------
+# Temporary / scratch
+# ----------------------------
+tmp/
+temp/
+scratch/
+
+*.tmp
+*.temp
+*.bak
+
+# ----------------------------
+# Jupyter
+# ----------------------------
+.ipynb_checkpoints/
+
+# ----------------------------
+# LaTeX generated files
+# ----------------------------
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+
+# Keep manuscript source files
+!*.tex
+
+# ----------------------------
+# OS files
+# ----------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ----------------------------
+# External repositories
+# ----------------------------
+external/
+
+# ----------------------------
+# Antigravity / local agent artifacts
+# ----------------------------
+brain/
+.task/
+tasks/
+
+# ----------------------------
+# Generated plots / figures
+# ----------------------------
+# Do NOT globally ignore PNG/PDF because manuscript figures
+# and documentation may intentionally be version-controlled.
+
+# ----------------------------
+# IMPORTANT: keep reproducibility files
+# ----------------------------
+!final_experiment_config.json
+!requirements.txt
+!README.md
+!EXPERIMENT_NOTES.md
+!EXTENDED_EXPERIMENTS.md

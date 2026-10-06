@@ -1,0 +1,124 @@
+{
+  "attack_settings": {
+    "attack_timing": "pre_training_static_injection",
+    "malicious_client_count": 1,
+    "malicious_client_id": 0,
+    "poison_rate": 0.2,
+    "poison_rate_sensitivity": [
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "target_class": 0,
+    "trigger_active_features": 16,
+    "trigger_feature_norm": 1.0,
+    "trigger_feature_type": "fixed_sparse_random",
+    "trigger_size": 3,
+    "trigger_size_sensitivity": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "trigger_type": "clique",
+    "victim_count_formula": "min(candidates, max(1, ceil(poison_rate * candidates)))",
+    "victim_selection_candidate_pool": "malicious_client_non_target_training_nodes",
+    "victim_selection_rule": "deterministic_randperm_seed"
+  },
+  "benchmark_suite": "multidata_suite",
+  "checkpoint_policy": {
+    "forbidden_signals": [
+      "test_accuracy",
+      "attack_success_rate",
+      "malicious_labels",
+      "final_round_default"
+    ],
+    "selection_graph": "clean_unattacked_validation_split",
+    "selection_metric": "validation_accuracy",
+    "selection_rule": "argmax_over_rounds(validation_accuracy)"
+  },
+  "config_version": "1.0.0",
+  "datasets": {
+    "cora": {
+      "dataset_source": "torch_geometric.datasets.Planetoid",
+      "display_name": "Cora",
+      "key": "cora",
+      "learning_rate": 0.01,
+      "num_classes": 7,
+      "num_features": 1433,
+      "sampled": false,
+      "split": "public"
+    },
+    "pubmed": {
+      "dataset_source": "torch_geometric.datasets.Planetoid",
+      "display_name": "PubMed",
+      "key": "pubmed",
+      "learning_rate": 0.01,
+      "num_classes": 3,
+      "num_features": 500,
+      "sampled": false,
+      "split": "public"
+    },
+    "reddit": {
+      "dataset_source": "torch_geometric.datasets.Reddit",
+      "display_name": "Reddit",
+      "key": "reddit",
+      "learning_rate": 0.005,
+      "num_classes": 41,
+      "num_features": 602,
+      "reddit_sample_seed": 42,
+      "reddit_sample_size": 8000,
+      "sampled": true,
+      "split": "full"
+    }
+  },
+  "description": "Authoritative frozen common experimental benchmark configuration for ETD-FGL and compared baselines",
+  "evaluation_settings": {
+    "asr_aggregation": "pooled_across_all_eligible_test_nodes",
+    "asr_metric": "ASR: fraction of non-target test nodes predicted as target_class when attached to trigger clique",
+    "attack_effect_metric": "ASR - CTR_clean",
+    "clean_accuracy_metric": "accuracy on global test_mask with original labels",
+    "clean_target_rate_metric": "CTR_clean: fraction of non-target test nodes predicted as target_class on clean graph",
+    "evaluation_frequency": "every_round"
+  },
+  "freeze_date": "2026-10-04",
+  "partition_settings": {
+    "client_count_scalability": [
+      5,
+      10,
+      20,
+      30,
+      50
+    ],
+    "dirichlet_alphas": [
+      0.1,
+      0.5,
+      1.0
+    ],
+    "guarantee_malicious_non_target_training": true,
+    "iid_strategy": "stratified_split_aware_round_robin",
+    "noniid_strategy": "split_aware_dirichlet",
+    "num_clients": 5,
+    "repair_empty_training": true,
+    "reuse_partition_across_methods": true,
+    "strategy_default": "iid"
+  },
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "training_settings": {
+    "common_backbone_architecture": "GCN (2 GCNConv layers, cached=False)",
+    "dropout": 0.5,
+    "global_rounds": 50,
+    "hidden_channels": 32,
+    "initial_parameter_pairing": "set_seed(seed)_before_model_init",
+    "local_supervised_epochs": 3,
+    "optimizer": "Adam",
+    "weight_decay": 0.0005
+  }
+}

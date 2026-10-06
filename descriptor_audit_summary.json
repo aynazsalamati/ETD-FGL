@@ -1,0 +1,635 @@
+{
+  "benchmark_metadata": {
+    "datasets": [
+      "cora",
+      "pubmed",
+      "reddit"
+    ],
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "partition_conditions": [
+      "iid",
+      "dirichlet_0.1",
+      "dirichlet_0.5",
+      "dirichlet_1.0"
+    ],
+    "total_conditions": 60,
+    "total_client_evaluations": 300,
+    "hidden_channels_verified": 32
+  },
+  "support_distribution": {
+    "cora": {
+      "iid": {
+        "total_graphs": 25,
+        "count_0_edges": 13,
+        "pct_0_edges": 52.0,
+        "count_1_edge": 8,
+        "pct_1_edge": 32.0,
+        "count_2_4_edges": 4,
+        "pct_2_4_edges": 16.0,
+        "count_5_9_edges": 0,
+        "pct_5_9_edges": 0.0,
+        "count_ge_10_edges": 0,
+        "pct_ge_10_edges": 0.0,
+        "median_eligible": 0.0,
+        "mean_eligible": 0.64,
+        "min_eligible": 0,
+        "max_eligible": 2
+      },
+      "dirichlet_0.1": {
+        "total_graphs": 25,
+        "count_0_edges": 8,
+        "pct_0_edges": 32.0,
+        "count_1_edge": 4,
+        "pct_1_edge": 16.0,
+        "count_2_4_edges": 7,
+        "pct_2_4_edges": 28.0,
+        "count_5_9_edges": 6,
+        "pct_5_9_edges": 24.0,
+        "count_ge_10_edges": 0,
+        "pct_ge_10_edges": 0.0,
+        "median_eligible": 2.0,
+        "mean_eligible": 2.76,
+        "min_eligible": 0,
+        "max_eligible": 9
+      },
+      "dirichlet_0.5": {
+        "total_graphs": 25,
+        "count_0_edges": 13,
+        "pct_0_edges": 52.0,
+        "count_1_edge": 1,
+        "pct_1_edge": 4.0,
+        "count_2_4_edges": 8,
+        "pct_2_4_edges": 32.0,
+        "count_5_9_edges": 3,
+        "pct_5_9_edges": 12.0,
+        "count_ge_10_edges": 0,
+        "pct_ge_10_edges": 0.0,
+        "median_eligible": 0.0,
+        "mean_eligible": 1.48,
+        "min_eligible": 0,
+        "max_eligible": 6
+      },
+      "dirichlet_1.0": {
+        "total_graphs": 25,
+        "count_0_edges": 8,
+        "pct_0_edges": 32.0,
+        "count_1_edge": 10,
+        "pct_1_edge": 40.0,
+        "count_2_4_edges": 5,
+        "pct_2_4_edges": 20.0,
+        "count_5_9_edges": 2,
+        "pct_5_9_edges": 8.0,
+        "count_ge_10_edges": 0,
+        "pct_ge_10_edges": 0.0,
+        "median_eligible": 1.0,
+        "mean_eligible": 1.28,
+        "min_eligible": 0,
+        "max_eligible": 6
+      }
+    },
+    "pubmed": {
+      "iid": {
+        "total_graphs": 25,
+        "count_0_edges": 25,
+        "pct_0_edges": 100.0,
+        "count_1_edge": 0,
+        "pct_1_edge": 0.0,
+        "count_2_4_edges": 0,
+        "pct_2_4_edges": 0.0,
+        "count_5_9_edges": 0,
+        "pct_5_9_edges": 0.0,
+        "count_ge_10_edges": 0,
+        "pct_ge_10_edges": 0.0,
+        "median_eligible": 0.0,
+        "mean_eligible": 0.0,
+        "min_eligible": 0,
+        "max_eligible": 0
+      },
+      "dirichlet_0.1": {
+        "total_graphs": 25,
+        "count_0_edges": 25,
+        "pct_0_edges": 100.0,
+        "count_1_edge": 0,
+        "pct_1_edge": 0.0,
+        "count_2_4_edges": 0,
+        "pct_2_4_edges": 0.0,
+        "count_5_9_edges": 0,
+        "pct_5_9_edges": 0.0,
+        "count_ge_10_edges": 0,
+        "pct_ge_10_edges": 0.0,
+        "median_eligible": 0.0,
+        "mean_eligible": 0.0,
+        "min_eligible": 0,
+        "max_eligible": 0
+      },
+      "dirichlet_0.5": {
+        "total_graphs": 25,
+        "count_0_edges": 25,
+        "pct_0_edges": 100.0,
+        "count_1_edge": 0,
+        "pct_1_edge": 0.0,
+        "count_2_4_edges": 0,
+        "pct_2_4_edges": 0.0,
+        "count_5_9_edges": 0,
+        "pct_5_9_edges": 0.0,
+        "count_ge_10_edges": 0,
+        "pct_ge_10_edges": 0.0,
+        "median_eligible": 0.0,
+        "mean_eligible": 0.0,
+        "min_eligible": 0,
+        "max_eligible": 0
+      },
+      "dirichlet_1.0": {
+        "total_graphs": 25,
+        "count_0_edges": 25,
+        "pct_0_edges": 100.0,
+        "count_1_edge": 0,
+        "pct_1_edge": 0.0,
+        "count_2_4_edges": 0,
+        "pct_2_4_edges": 0.0,
+        "count_5_9_edges": 0,
+        "pct_5_9_edges": 0.0,
+        "count_ge_10_edges": 0,
+        "pct_ge_10_edges": 0.0,
+        "median_eligible": 0.0,
+        "mean_eligible": 0.0,
+        "min_eligible": 0,
+        "max_eligible": 0
+      }
+    },
+    "reddit": {
+      "iid": {
+        "total_graphs": 25,
+        "count_0_edges": 0,
+        "pct_0_edges": 0.0,
+        "count_1_edge": 0,
+        "pct_1_edge": 0.0,
+        "count_2_4_edges": 0,
+        "pct_2_4_edges": 0.0,
+        "count_5_9_edges": 0,
+        "pct_5_9_edges": 0.0,
+        "count_ge_10_edges": 25,
+        "pct_ge_10_edges": 100.0,
+        "median_eligible": 1545.0,
+        "mean_eligible": 1536.72,
+        "min_eligible": 1280,
+        "max_eligible": 1808
+      },
+      "dirichlet_0.1": {
+        "total_graphs": 25,
+        "count_0_edges": 0,
+        "pct_0_edges": 0.0,
+        "count_1_edge": 0,
+        "pct_1_edge": 0.0,
+        "count_2_4_edges": 0,
+        "pct_2_4_edges": 0.0,
+        "count_5_9_edges": 0,
+        "pct_5_9_edges": 0.0,
+        "count_ge_10_edges": 25,
+        "pct_ge_10_edges": 100.0,
+        "median_eligible": 4468.0,
+        "mean_eligible": 4611.44,
+        "min_eligible": 745,
+        "max_eligible": 9304
+      },
+      "dirichlet_0.5": {
+        "total_graphs": 25,
+        "count_0_edges": 0,
+        "pct_0_edges": 0.0,
+        "count_1_edge": 0,
+        "pct_1_edge": 0.0,
+        "count_2_4_edges": 0,
+        "pct_2_4_edges": 0.0,
+        "count_5_9_edges": 0,
+        "pct_5_9_edges": 0.0,
+        "count_ge_10_edges": 25,
+        "pct_ge_10_edges": 100.0,
+        "median_eligible": 2649.0,
+        "mean_eligible": 2894.88,
+        "min_eligible": 1079,
+        "max_eligible": 7484
+      },
+      "dirichlet_1.0": {
+        "total_graphs": 25,
+        "count_0_edges": 0,
+        "pct_0_edges": 0.0,
+        "count_1_edge": 0,
+        "pct_1_edge": 0.0,
+        "count_2_4_edges": 0,
+        "pct_2_4_edges": 0.0,
+        "count_5_9_edges": 0,
+        "pct_5_9_edges": 0.0,
+        "count_ge_10_edges": 25,
+        "pct_ge_10_edges": 100.0,
+        "median_eligible": 2102.0,
+        "mean_eligible": 2242.32,
+        "min_eligible": 1320,
+        "max_eligible": 4187
+      }
+    }
+  },
+  "zero_fallback_frequency": {
+    "cora": {
+      "total_client_graphs": 100,
+      "zero_fallback_count": 42,
+      "zero_fallback_pct": 42.0
+    },
+    "pubmed": {
+      "total_client_graphs": 100,
+      "zero_fallback_count": 100,
+      "zero_fallback_pct": 100.0
+    },
+    "reddit": {
+      "total_client_graphs": 100,
+      "zero_fallback_count": 0,
+      "zero_fallback_pct": 0.0
+    },
+    "overall": {
+      "total_client_graphs": 300,
+      "zero_fallback_count": 142,
+      "zero_fallback_pct": 47.33
+    }
+  },
+  "label_poisoning_sensitivity": {
+    "total_malicious_evaluations": 60,
+    "homophily_changed_cases": 26,
+    "changed_case_details": [
+      {
+        "dataset": "cora",
+        "seed": 42,
+        "partition_condition": "dirichlet_0.1",
+        "eligible_edges_clean": 4,
+        "eligible_edges_current": 4,
+        "reference_homophily": 0.75,
+        "current_homophily": 0.25,
+        "absolute_change": 0.5
+      },
+      {
+        "dataset": "cora",
+        "seed": 42,
+        "partition_condition": "dirichlet_0.5",
+        "eligible_edges_clean": 5,
+        "eligible_edges_current": 5,
+        "reference_homophily": 0.4,
+        "current_homophily": 0.6,
+        "absolute_change": 0.19999999999999996
+      },
+      {
+        "dataset": "cora",
+        "seed": 43,
+        "partition_condition": "dirichlet_1.0",
+        "eligible_edges_clean": 2,
+        "eligible_edges_current": 2,
+        "reference_homophily": 0.5,
+        "current_homophily": 0.0,
+        "absolute_change": 0.5
+      },
+      {
+        "dataset": "cora",
+        "seed": 44,
+        "partition_condition": "dirichlet_0.1",
+        "eligible_edges_clean": 4,
+        "eligible_edges_current": 4,
+        "reference_homophily": 1.0,
+        "current_homophily": 0.5,
+        "absolute_change": 0.5
+      },
+      {
+        "dataset": "cora",
+        "seed": 44,
+        "partition_condition": "dirichlet_1.0",
+        "eligible_edges_clean": 1,
+        "eligible_edges_current": 1,
+        "reference_homophily": 1.0,
+        "current_homophily": 0.0,
+        "absolute_change": 1.0
+      },
+      {
+        "dataset": "cora",
+        "seed": 45,
+        "partition_condition": "dirichlet_1.0",
+        "eligible_edges_clean": 1,
+        "eligible_edges_current": 1,
+        "reference_homophily": 1.0,
+        "current_homophily": 0.0,
+        "absolute_change": 1.0
+      },
+      {
+        "dataset": "reddit",
+        "seed": 42,
+        "partition_condition": "iid",
+        "eligible_edges_clean": 1567,
+        "eligible_edges_current": 1567,
+        "reference_homophily": 0.7760051052967454,
+        "current_homophily": 0.5794511805998723,
+        "absolute_change": 0.19655392469687305
+      },
+      {
+        "dataset": "reddit",
+        "seed": 42,
+        "partition_condition": "dirichlet_0.1",
+        "eligible_edges_clean": 3325,
+        "eligible_edges_current": 3325,
+        "reference_homophily": 0.9154887218045112,
+        "current_homophily": 0.6526315789473685,
+        "absolute_change": 0.2628571428571428
+      },
+      {
+        "dataset": "reddit",
+        "seed": 42,
+        "partition_condition": "dirichlet_0.5",
+        "eligible_edges_clean": 7484,
+        "eligible_edges_current": 7484,
+        "reference_homophily": 0.8691876002137894,
+        "current_homophily": 0.5950026723677178,
+        "absolute_change": 0.2741849278460716
+      },
+      {
+        "dataset": "reddit",
+        "seed": 42,
+        "partition_condition": "dirichlet_1.0",
+        "eligible_edges_clean": 1805,
+        "eligible_edges_current": 1805,
+        "reference_homophily": 0.8227146814404432,
+        "current_homophily": 0.5883656509695291,
+        "absolute_change": 0.23434903047091415
+      },
+      {
+        "dataset": "reddit",
+        "seed": 43,
+        "partition_condition": "iid",
+        "eligible_edges_clean": 1438,
+        "eligible_edges_current": 1438,
+        "reference_homophily": 0.7573018080667594,
+        "current_homophily": 0.5312934631432545,
+        "absolute_change": 0.22600834492350486
+      },
+      {
+        "dataset": "reddit",
+        "seed": 43,
+        "partition_condition": "dirichlet_0.1",
+        "eligible_edges_clean": 7332,
+        "eligible_edges_current": 7332,
+        "reference_homophily": 0.9541734860883797,
+        "current_homophily": 0.6591653027823241,
+        "absolute_change": 0.2950081833060556
+      },
+      {
+        "dataset": "reddit",
+        "seed": 43,
+        "partition_condition": "dirichlet_0.5",
+        "eligible_edges_clean": 3132,
+        "eligible_edges_current": 3132,
+        "reference_homophily": 0.8553639846743295,
+        "current_homophily": 0.6302681992337165,
+        "absolute_change": 0.22509578544061304
+      },
+      {
+        "dataset": "reddit",
+        "seed": 43,
+        "partition_condition": "dirichlet_1.0",
+        "eligible_edges_clean": 1903,
+        "eligible_edges_current": 1903,
+        "reference_homophily": 0.8686284813452444,
+        "current_homophily": 0.6137677351550184,
+        "absolute_change": 0.25486074619022603
+      },
+      {
+        "dataset": "reddit",
+        "seed": 44,
+        "partition_condition": "iid",
+        "eligible_edges_clean": 1405,
+        "eligible_edges_current": 1405,
+        "reference_homophily": 0.7501779359430605,
+        "current_homophily": 0.5209964412811388,
+        "absolute_change": 0.22918149466192173
+      },
+      {
+        "dataset": "reddit",
+        "seed": 44,
+        "partition_condition": "dirichlet_0.1",
+        "eligible_edges_clean": 3714,
+        "eligible_edges_current": 3714,
+        "reference_homophily": 0.8384491114701131,
+        "current_homophily": 0.5619278406031233,
+        "absolute_change": 0.27652127086698985
+      },
+      {
+        "dataset": "reddit",
+        "seed": 44,
+        "partition_condition": "dirichlet_0.5",
+        "eligible_edges_clean": 1925,
+        "eligible_edges_current": 1925,
+        "reference_homophily": 0.7844155844155845,
+        "current_homophily": 0.5412987012987013,
+        "absolute_change": 0.24311688311688318
+      },
+      {
+        "dataset": "reddit",
+        "seed": 44,
+        "partition_condition": "dirichlet_1.0",
+        "eligible_edges_clean": 2102,
+        "eligible_edges_current": 2102,
+        "reference_homophily": 0.840152235965747,
+        "current_homophily": 0.5861084681255947,
+        "absolute_change": 0.25404376784015226
+      },
+      {
+        "dataset": "reddit",
+        "seed": 45,
+        "partition_condition": "iid",
+        "eligible_edges_clean": 1564,
+        "eligible_edges_current": 1564,
+        "reference_homophily": 0.7078005115089514,
+        "current_homophily": 0.4884910485933504,
+        "absolute_change": 0.219309462915601
+      },
+      {
+        "dataset": "reddit",
+        "seed": 45,
+        "partition_condition": "dirichlet_0.1",
+        "eligible_edges_clean": 2712,
+        "eligible_edges_current": 2712,
+        "reference_homophily": 0.9251474926253688,
+        "current_homophily": 0.6257374631268436,
+        "absolute_change": 0.29941002949852513
+      },
+      {
+        "dataset": "reddit",
+        "seed": 45,
+        "partition_condition": "dirichlet_0.5",
+        "eligible_edges_clean": 3822,
+        "eligible_edges_current": 3822,
+        "reference_homophily": 0.7977498691784406,
+        "current_homophily": 0.5588697017268446,
+        "absolute_change": 0.23888016745159601
+      },
+      {
+        "dataset": "reddit",
+        "seed": 45,
+        "partition_condition": "dirichlet_1.0",
+        "eligible_edges_clean": 2826,
+        "eligible_edges_current": 2826,
+        "reference_homophily": 0.8602264685067232,
+        "current_homophily": 0.5973106864826611,
+        "absolute_change": 0.2629157820240622
+      },
+      {
+        "dataset": "reddit",
+        "seed": 46,
+        "partition_condition": "iid",
+        "eligible_edges_clean": 1398,
+        "eligible_edges_current": 1398,
+        "reference_homophily": 0.7353361945636624,
+        "current_homophily": 0.5214592274678111,
+        "absolute_change": 0.21387696709585124
+      },
+      {
+        "dataset": "reddit",
+        "seed": 46,
+        "partition_condition": "dirichlet_0.1",
+        "eligible_edges_clean": 4417,
+        "eligible_edges_current": 4417,
+        "reference_homophily": 0.8969889064976229,
+        "current_homophily": 0.5931627801675345,
+        "absolute_change": 0.3038261263300883
+      },
+      {
+        "dataset": "reddit",
+        "seed": 46,
+        "partition_condition": "dirichlet_0.5",
+        "eligible_edges_clean": 3804,
+        "eligible_edges_current": 3804,
+        "reference_homophily": 0.8919558359621451,
+        "current_homophily": 0.593322818086225,
+        "absolute_change": 0.2986330178759201
+      },
+      {
+        "dataset": "reddit",
+        "seed": 46,
+        "partition_condition": "dirichlet_1.0",
+        "eligible_edges_clean": 2507,
+        "eligible_edges_current": 2507,
+        "reference_homophily": 0.817710410849621,
+        "current_homophily": 0.5943358595931392,
+        "absolute_change": 0.22337455125648187
+      }
+    ]
+  },
+  "standardization_stability": {
+    "cora": {
+      "mean_homophily_std": 0.4511,
+      "median_homophily_std": 0.4481,
+      "min_homophily_std": 0.3873,
+      "max_homophily_std": 0.4899,
+      "pct_conditions_zero_std": 0.0,
+      "mean_effective_scale": 0.4511
+    },
+    "pubmed": {
+      "mean_homophily_std": 0.0,
+      "median_homophily_std": 0.0,
+      "min_homophily_std": 0.0,
+      "max_homophily_std": 0.0,
+      "pct_conditions_zero_std": 100.0,
+      "mean_effective_scale": 1.0
+    },
+    "reddit": {
+      "mean_homophily_std": 0.0363,
+      "median_homophily_std": 0.0317,
+      "min_homophily_std": 0.013,
+      "max_homophily_std": 0.061,
+      "pct_conditions_zero_std": 0.0,
+      "mean_effective_scale": 0.0363
+    }
+  },
+  "policy_detection_separation": {
+    "Policy_A_6D": {
+      "rank_1_count": 60,
+      "rank_1_pct": 100.0,
+      "rank_2_count": 0,
+      "rank_2_pct": 0.0,
+      "rank_ge_3_count": 0,
+      "rank_ge_3_pct": 0.0,
+      "mean_malicious_std_drift": 6.6368,
+      "median_malicious_std_drift": 2.732,
+      "mean_max_benign_std_drift": 0.0,
+      "median_max_benign_std_drift": 0.0,
+      "mean_spearman_corr_with_A": 1.0
+    },
+    "Policy_B_5D": {
+      "rank_1_count": 60,
+      "rank_1_pct": 100.0,
+      "rank_2_count": 0,
+      "rank_2_pct": 0.0,
+      "rank_ge_3_count": 0,
+      "rank_ge_3_pct": 0.0,
+      "mean_malicious_std_drift": 5.7026,
+      "median_malicious_std_drift": 2.0207,
+      "mean_max_benign_std_drift": 0.0,
+      "median_max_benign_std_drift": 0.0,
+      "mean_spearman_corr_with_A": 1.0
+    },
+    "Policy_C_th1": {
+      "rank_1_count": 60,
+      "rank_1_pct": 100.0,
+      "rank_2_count": 0,
+      "rank_2_pct": 0.0,
+      "rank_ge_3_count": 0,
+      "rank_ge_3_pct": 0.0,
+      "mean_malicious_std_drift": 6.6368,
+      "median_malicious_std_drift": 2.732,
+      "mean_max_benign_std_drift": 0.0,
+      "median_max_benign_std_drift": 0.0,
+      "mean_spearman_corr_with_A": 1.0
+    },
+    "Policy_C_th3": {
+      "rank_1_count": 60,
+      "rank_1_pct": 100.0,
+      "rank_2_count": 0,
+      "rank_2_pct": 0.0,
+      "rank_ge_3_count": 0,
+      "rank_ge_3_pct": 0.0,
+      "mean_malicious_std_drift": 6.6088,
+      "median_malicious_std_drift": 2.1231,
+      "mean_max_benign_std_drift": 0.0,
+      "median_max_benign_std_drift": 0.0,
+      "mean_spearman_corr_with_A": 1.0
+    },
+    "Policy_C_th5": {
+      "rank_1_count": 60,
+      "rank_1_pct": 100.0,
+      "rank_2_count": 0,
+      "rank_2_pct": 0.0,
+      "rank_ge_3_count": 0,
+      "rank_ge_3_pct": 0.0,
+      "mean_malicious_std_drift": 6.5988,
+      "median_malicious_std_drift": 2.0207,
+      "mean_max_benign_std_drift": 0.0,
+      "median_max_benign_std_drift": 0.0,
+      "mean_spearman_corr_with_A": 1.0
+    },
+    "Policy_C_th10": {
+      "rank_1_count": 60,
+      "rank_1_pct": 100.0,
+      "rank_2_count": 0,
+      "rank_2_pct": 0.0,
+      "rank_ge_3_count": 0,
+      "rank_ge_3_pct": 0.0,
+      "mean_malicious_std_drift": 6.5984,
+      "median_malicious_std_drift": 2.0207,
+      "mean_max_benign_std_drift": 0.0,
+      "median_max_benign_std_drift": 0.0,
+      "mean_spearman_corr_with_A": 1.0
+    }
+  },
+  "decision": {
+    "verdict": "HOMOPHILY UNRELIABLE \u2014 REMOVE FROM FINAL DESCRIPTOR",
+    "rationale": "Overall zero-fallback rate is 47.33%, Cora zero-fallback rate is 42.0%. Label-poisoning caused spurious homophily jumps in 26 conditions despite unchanged graph structure. Policy B (5D label-free) provides 100% clean structural separation without label leakage or sparsity artifacts."
+  }
+}
